@@ -51,25 +51,8 @@
       >. Coded by <a href="https://github.com/Alan1234111">Alan</a>.
     </div>
 
-    <script>
-      const advices = document.getElementById("adviceNumber");
-      const adviceText = document.getElementById("adviceText");
-      const cube = document.querySelector(".circle");
+    <script src="main..js">
 
-      const endpoint = "https://api.adviceslip.com/advice";
-
-      const draw = function () {
-        fetch(endpoint)
-          .then((blob) => blob.json())
-          .then((data) => {
-            let advice = data;
-            advices.textContent = `Advice #${advice.slip.id}`;
-            adviceText.textContent = advice.slip.advice;
-          });
-      };
-      draw();
-
-      cube.addEventListener("click", draw);
     </script>
   </body>
 </html>
